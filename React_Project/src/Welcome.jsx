@@ -1,4 +1,4 @@
-const Welcome = ({name}) => {
+const Welcome = ({name = "Missing name"}) => {
     return(
         <>
           <p>Welcome {name}!</p>
