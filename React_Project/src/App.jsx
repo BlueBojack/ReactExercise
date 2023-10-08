@@ -1,11 +1,11 @@
 import Hello from "./Hello";
 import Message from "./Message";
+import Welcome from "./Welcome";
 
 const App = () => {
     return (
         <>
-        <Hello />
-        <Message />
+        <Welcome name="Curtis"/>
         </>
     )
 }
