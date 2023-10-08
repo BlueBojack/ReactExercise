@@ -5,7 +5,7 @@ import Welcome from "./Welcome";
 const App = () => {
     return (
         <>
-        <Welcome name="Curtis"/>
+        <Welcome name="Curtis" age={24}/>
         </>
     )
 }
