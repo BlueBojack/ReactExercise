@@ -5,6 +5,6 @@ import AlertClock from './AlertClock.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AlertClock />
+    <App />
   </React.StrictMode>,
 )
