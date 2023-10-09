@@ -1,10 +1,16 @@
 import AlertClock from "./AlertClock"
 
 
+
 const App = () => {
+
+    const handleClock = () => {
+        alert(new Date().toLocaleDateString());
+    }
+
     return (
         <>
-            <AlertClock />
+            <AlertClock onClick={handleClock} />
         </>
     )
 }
