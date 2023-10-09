@@ -1,17 +1,13 @@
-import AlertClock from "./AlertClock"
+import Counter from "./Counter"
 
 
+function App() {
 
-const App = () => {
-
-    const handleClock = () => {
-        alert(new Date().toLocaleDateString());
-    }
-
-    return (
-        <>
-            <AlertClock onClick={handleClock} />
-        </>
-    )
+    return(
+            <>
+                <Counter />
+             </>
+    )   
 }
+
 export default App
