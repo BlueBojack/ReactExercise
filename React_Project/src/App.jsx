@@ -1,11 +1,16 @@
 import Counter from "./Counter"
+import { useState } from "react";
 
 
-function App() {
+const App = () => {
+
+    const [counter, setCounter] = useState(0);
+
+    const handleAddOne = () => setCounter(counter + 1)
 
     return(
             <>
-                <Counter />
+                <Counter counter={counter} setCounter={handleAddOne}/>
              </>
     )   
 }
