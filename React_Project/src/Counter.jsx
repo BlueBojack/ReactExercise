@@ -1,8 +1,10 @@
+import CounterDisplay from "./CounterDisplay"
+
 const Counter = ({counter, setCounter}) => {
 
     return(
         <>
-            <h2>{counter}</h2>
+            <CounterDisplay counter={counter} />
             <button onClick={setCounter}>Add one to the counter!</button>
         </>
     )
