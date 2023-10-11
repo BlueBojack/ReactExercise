@@ -6,7 +6,7 @@ const MouseClicker =  (props) => {
 
     return(
         <>
-            <button name={props.name} onClick={handleClick}>Click</button>
+            <button name={props.name} onClick={handleClick} > <img src="src\assets\react.svg" name={props.name} /> Click</button>
         </>
     )
 }
