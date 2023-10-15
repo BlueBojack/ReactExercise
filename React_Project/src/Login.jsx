@@ -36,7 +36,7 @@ export default function Login({onLogin}) {
 
     const handleLogin = (event) => {
         event.preventDefault()
-        onLogin(data)
+        onLogin(data) // here
     }
 
     return (
