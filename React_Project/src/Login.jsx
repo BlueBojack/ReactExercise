@@ -45,7 +45,7 @@ export default function Login({onLogin}) {
                 <input name="username" type="text" onChange={handleInputChanges} value={data.username}></input>
                 <input name="password" type="password" onChange={handleInputChanges}  value={data.password}></input>
                 <input name="checkbox" type="checkbox"onChange={handleInputChanges} value={data.checkbox}></input>
-                <button  disabled= {isButtonDisabled} onClick={handleLogin}>Login</button>
+                <button type="submit"  disabled= {isButtonDisabled} onClick={handleLogin}>Login</button>
                 <button onClick={handleReset} >Reset</button>
             </form>
         </>
