@@ -1,12 +1,18 @@
-import Login from "./Login"
+import { useEffect, useRef } from "react";
 
-const App = () => {
+const FocusableInput = () => {
+  const inputRef = useRef(null);
 
-    return(
-            <>
-                <  Login/>    
-            </>
-    )   
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
+  
+
+  return (
+    <>
+      <input type="text" ref={inputRef}/>
+    </>
+  )
 }
 
-export default App
+export default FocusableInput;
