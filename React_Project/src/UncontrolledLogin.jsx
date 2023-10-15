@@ -10,13 +10,25 @@ export function UncontrolledLogin (){
     const password = event.target.password.value
     const remember = event.target.remember.checked
 
-        const data = {
+        const data1 = {
             username,
             password,
             remember
         }
 
-        console.log(data);
+        console.log(data1);
+
+    }
+
+    const formData = new FormData(event.target)
+
+        const data2 = {
+            username: formData.get("username"),
+            password: formData.get("password"),
+            remember: formData.get("remember") === "on" ? true : false
+        }
+
+        console.log(data2);
 
     }
 
