@@ -27,7 +27,13 @@ export function UncontrolledLogin (){
             password: formData.get("password"),
             remember: formData.get("remember") === "on" ? true : false
         }
+ // Svantaggi:
 
+    /* Potrebbe non funzionare con browser più vecchi */
+
+// Vantaggi:
+
+    /* E' molto più semplice da utilizzare e riesce a gestire form complessi */
         console.log(data2);
 
     }
@@ -44,4 +50,3 @@ export function UncontrolledLogin (){
             </form>
         </>
     )
-}
