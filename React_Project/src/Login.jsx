@@ -24,6 +24,16 @@ export default function Login({onLogin}) {
     const isButtonDisabled = data.username === '' || data.password === '';
 
 
+    const handleReset = () => {
+        setData(
+            {
+                username:"",
+                password:"",
+                checkbox:false
+            }
+        )
+    }
+
     const handleLogin = (event) => {
         event.preventDefault()
         onLogin(data)
@@ -36,6 +46,7 @@ export default function Login({onLogin}) {
                 <input name="password" type="password" onChange={handleInputChanges}  value={data.password}></input>
                 <input name="checkbox" type="checkbox"onChange={handleInputChanges} value={data.checkbox}></input>
                 <button  disabled= {isButtonDisabled} onClick={handleLogin}>Login</button>
+                <button onClick={handleReset} >Reset</button>
             </form>
         </>
     )
