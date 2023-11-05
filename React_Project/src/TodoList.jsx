@@ -33,8 +33,8 @@ const TodoList = () => {
     return (
         <>
             <input type="text" name="todo" value={todo} onChange={handleInput} />
-            <button onClick={handleAdd}>Aggiungi</button>
-            <button onClick={handleReset}>Clear</button>
+            <button className="" onClick={handleAdd}>Aggiungi</button>
+            <button className="" onClick={handleReset}>Clear</button>
             {
                 items.map((item, index) => {
                     return (
