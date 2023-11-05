@@ -1,14 +1,24 @@
-export function FocusableInput() {
+import { useEffect, useRef } from "react";
 
-    const inputRef = useRef(null);
+const FocusableInput = () => {
+  const inputRef = useRef(null);
 
-    useEffect(() => {
-      inputRef.current?.focus()
-    }, [])
+  const isMounted = useRef(false);
 
-    return (
-        <>
-            <input type="text" ref={InputRef}></input>
-        </>
-    )
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      console.log('Mounting for the first time!')
+    } 
+    inputRef.current.focus()
+  }, [])
+  
+
+  return (
+    <>
+      <input type="text" ref={inputRef}/>
+    </>
+  )
 }
+
+export default FocusableInput;
