@@ -3,8 +3,8 @@ const Colors = ({ items }) => {
         <>
             <ul>
                 {
-                    items.map(item => {
-                        return <li>{item}</li>
+                    items.map((item) => {
+                        return <li key={item.id}>{item.name}</li>
                     })
                 }
             </ul>
