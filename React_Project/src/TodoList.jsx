@@ -22,6 +22,12 @@ const TodoList = () => {
     const handleReset = () => {
         setItems([])
     }
+
+    const handleDelete = (index) => {
+        setItems(
+            (prevArr => prevArr.filter((item, i) => i !== index))
+        )
+    };
     
 
     return (
@@ -30,7 +36,14 @@ const TodoList = () => {
             <button onClick={handleAdd}>Aggiungi</button>
             <button onClick={handleReset}>Clear</button>
             {
-                items.map(item => <li>{item}</li>)
+                items.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            {item}
+                            <button onClick={() => handleDelete(index)}>Remove</button>
+                        </li>
+                    )
+                })
             }
         </>
     )
