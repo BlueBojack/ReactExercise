@@ -1,13 +1,14 @@
 import { useEffect, useRef } from "react";
 import FocusableInput from "./FocusableInput";
+import Counter from "./Counter";
 
 
 const App = () => {
    return (
       <>
-        <FocusableInput/>
+        <Counter initialValue={0}/>
       </>
   )
 }
 
-export default FocusableInput;
+export default App;

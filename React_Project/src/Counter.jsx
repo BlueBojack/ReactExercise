@@ -1,31 +1,36 @@
 import CounterDisplay from "./CounterDisplay"
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const Counter = (props) => {
-
-    const [count, setCount] = useState(props.reset)
-  
+const Counter = ({initialValue}) => {
+    const [count, setCount] = useState(initialValue)
+    const directionRef = useRef(null);
+    
     const handleIncrease = () =>{
         setCount(
-            count + props.value
+            count + 1
         )
     }
 
     const handleDecrease = () =>{
         setCount(
-            count - props.value
+            count - 1
         )
     }
 
     const handleReset = () =>{
-        setCount(props.reset)
+        setCount(initialValue)
     }
 
     useEffect(() => {
-        console.log(count)
-    }
-    ), [count]
+        const direction = count > initialValue ? 'Up' : count < initialValue ? 'Down' : null;
+        const prevDirection = directionRef.current;
+    
+        if (direction !== prevDirection) {
+          console.log(direction)
+        }
+    
+        directionRef.current = direction;
+      }, [count])
     
     return(
         <> 
