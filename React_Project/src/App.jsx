@@ -13,7 +13,7 @@ import Container from "./Container"
 const App = () => {
    return (
       <>
-        <Container />
+        <Container title={"It's raining somewhere else"} />
       </>
   )
 }
