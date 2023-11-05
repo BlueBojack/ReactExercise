@@ -5,12 +5,13 @@ import Colors from "./Colors";
 import TodoList from "./TodoList";
 import Welcome from "./Welcome"
 import Login from "./Login"
+import Clock from "./Clock"
 
 
 const App = () => {
    return (
       <>
-        <Login />
+        <Clock />
       </>
   )
 }
