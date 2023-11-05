@@ -1,7 +1,7 @@
 const CounterDisplay = ({counter}) => {
     return (
         <>
-            <h2>{counter}</h2>
+            <h2 style={{backgroundColor: 'lightblue', padding: '3px'}} >{counter}</h2>
         </>
     )
 }
