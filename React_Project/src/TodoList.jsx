@@ -9,7 +9,7 @@ const TodoList = () => {
             input.target.value
         )
     }
-    const awa = () => {
+    const handleAdd = () => {
         setItems(prevArr => {
           return [
             ...prevArr,
@@ -23,7 +23,7 @@ const TodoList = () => {
     return (
         <>
             <input type="text" name="todo" value={todo} onChange={handleInput} />
-            <button onClick={awa}>Aggiungi</button>
+            <button onClick={handleAdd}>Aggiungi</button>
             {
                 items.map(item => <li>{item}</li>)
             }
