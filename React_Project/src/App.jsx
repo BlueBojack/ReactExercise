@@ -3,12 +3,13 @@ import FocusableInput from "./FocusableInput";
 import Counter from "./Counter";
 import Colors from "./Colors";
 import TodoList from "./TodoList";
+import Welcome from "./Welcome"
 
 
 const App = () => {
    return (
       <>
-        <TodoList items={[]} />
+        <Welcome name={"Curtis"}/>
       </>
   )
 }
