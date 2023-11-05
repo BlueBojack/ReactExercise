@@ -18,12 +18,17 @@ const TodoList = () => {
         })
         setTodo('');
       }
+
+    const handleReset = () => {
+        setItems([])
+    }
     
 
     return (
         <>
             <input type="text" name="todo" value={todo} onChange={handleInput} />
             <button onClick={handleAdd}>Aggiungi</button>
+            <button onClick={handleReset}>Clear</button>
             {
                 items.map(item => <li>{item}</li>)
             }
