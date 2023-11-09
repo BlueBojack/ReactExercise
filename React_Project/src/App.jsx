@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { GithubUser } from "./GithubUser"
+import CurrentLocation from "./CurrentLocation";
 
 
 function App() {
   return (
     <>
-      <GithubUser username={"bluebojack"} />
+      <CurrentLocation />
     </>
   );
 }
