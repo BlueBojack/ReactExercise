@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Counter  from "./Counter";
-import ControlledForm from "./ControlledForm";
+import { GithubUser } from "./GithubUser"
 
 
 function App() {
   return (
     <>
-      <ControlledForm />
+      <GithubUser username={"bluebojack"} />
     </>
   );
 }
