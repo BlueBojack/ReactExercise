@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUsers";
 
 
 function App() {
   return (
     <>
-      <GithubUser username="BlueBojack" />
+      <GithubUsers />
     </>
   );
 }
