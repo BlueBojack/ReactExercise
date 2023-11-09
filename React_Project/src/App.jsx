@@ -16,9 +16,9 @@ function App() {
         <option value="it">IT</option>
         <option value="en">EN</option>
       </select>
-      <LanguageContext.Provider value={language}>
-        <Clock />
-      </LanguageContext.Provider>
+      {/* Senza il context provider il componente non riuscirà ad utilizzare il render condizionale e quindi anche
+      se verrà scelta l'opzione EN verrà renderizzata la prima versione disponibile */}
+        <Clock /> 
     </div>
   );
 }
