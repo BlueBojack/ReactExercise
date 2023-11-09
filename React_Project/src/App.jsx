@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { GithubUser } from "./GithubUser";
-import { GithubUsers } from "./GithubUsers";
+import Counter  from "./Counter";
 
 
 function App() {
   return (
     <>
-      <GithubUsers />
+      <Counter />
     </>
   );
 }
