@@ -1,21 +1,26 @@
-import { useEffect, useRef } from "react";
-import FocusableInput from "./FocusableInput";
-import Counter from "./Counter";
-import Colors from "./Colors";
-import TodoList from "./TodoList";
-import Welcome from "./Welcome"
-import Login from "./Login"
 import Clock from "./Clock"
 import Container from "./Container"
+import React, { useState } from "react";
+import { LanguageContext } from "./LanguageContext";
 
+function App() {
+  const [language, setLanguage] = useState("it");
 
+  function handleSetLanguage(event) {
+    setLanguage(event.target.value);
+  }
 
-const App = () => {
-   return (
-      <>
-        <Container title={"It's raining somewhere else"} />
-      </>
-  )
+  return (
+    <div>
+      <select value={language} onChange={handleSetLanguage}>
+        <option value="it">IT</option>
+        <option value="en">EN</option>
+      </select>
+      <LanguageContext.Provider value={language}>
+        <Clock />
+      </LanguageContext.Provider>
+    </div>
+  );
 }
 
 export default App;
