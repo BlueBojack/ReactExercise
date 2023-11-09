@@ -2,6 +2,8 @@ import  { Routes, Route, Link} from "react-router-dom";
 import Welcome from "./pages/Welcome"
 import Counter from "./pages/Counter"
 import { ShowGithubUser } from "./pages/ShowGithubUser"
+import NotFound from "./pages/NotFound";
+
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
         <Link to='/users/bluebojack'>GithubUser</Link>
       </nav>
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Welcome name="Curtis" />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="users/:username" element= {<ShowGithubUser />} />
